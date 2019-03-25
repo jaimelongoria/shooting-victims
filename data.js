@@ -31,5 +31,13 @@ let data = [{
 		"vic_age_group": "25-44",
 		"vic_sex": "male",
 		"vic_race": "Black"
-  }
+  },
+	{
+		"boro": "Brooklyn",
+		"precinct": 75,
+		"statistical_murder_flag": "FALSE",
+		"vic_age_group": "25-44",
+		"vic_sex": "male",
+		"vic_race": "Black"
+	}
 ];

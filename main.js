@@ -19,6 +19,22 @@ $(document).ready(function () { // we must wait for the DOM to be ready as the b
 		$("#favorites").html(person_template({ person: result }));
 	});
 
+	var result = _(data)
+		.groupBy('boro')
+		.map((items, boro) => ({ boro, count: items.length }))
+		.value();
+
+	console.log(result);
+
+	var result = _(data)
+		.groupBy('statistical_murder_flag')
+		.map((items, statistical_murder_flag) => ({ statistical_murder_flag, count: items.length }))
+		.value();
+
+	console.log(result);
+
+
+	//document.write('<pre>' + JSON.stringify(result, 0, 4) + '</pre>');
 
 
 }); // closes document ready
