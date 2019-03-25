@@ -19,6 +19,62 @@ $(document).ready(function () { // we must wait for the DOM to be ready as the b
 		$("#favorites").html(person_template({ person: result }));
 	});
 
+	var result = _(data)
+		.groupBy('boro')
+		.map((items, boro) => ({ boro, count: items.length }))
+		.value();
+
+	console.log(result);
+
+	var result = _(data)
+		.groupBy('statistical_murder_flag')
+		.map((items, statistical_murder_flag) => ({ statistical_murder_flag, count: items.length }))
+		.value();
+
+	console.log(result);
+
+	var result = _(data)
+		.groupBy('vic_age_group')
+		.map((items, vic_age_group) => ({ vic_age_group, count: items.length }))
+		.value();
+
+	console.log(result);
+
+
+	var result = _(data)
+		.groupBy('precinct')
+		.map((items, precinct) => ({ precinct, count: items.length }))
+		.value();
+
+	console.log(result);
+
+
+	var result = _(data)
+		.groupBy('vic_age_group')
+		.map((items, vic_age_group) => ({ vic_age_group, count: items.length }))
+		.value();
+
+	console.log(result);
+
+
+	var result = _(data)
+		.groupBy('vic_sex')
+		.map((items, vic_sex) => ({ vic_sex, count: items.length }))
+		.value();
+
+	console.log(result);
+
+
+	var result = _(data)
+		.groupBy('vic_race')
+		.map((items, vic_race) => ({ vic_race, count: items.length }))
+		.value();
+
+
+	console.log(result);
+
+	//https://stackoverflow.com/questions/37347714/lodash-count-unique-of-field
+	//link to help do counts
 
 
 }); // closes document ready
